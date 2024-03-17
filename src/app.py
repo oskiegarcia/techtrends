@@ -48,6 +48,7 @@ def about():
 # Define the post creation functionality
 @app.route('/create', methods=('GET', 'POST'))
 def create():
+    print("Creating a post... ")
     if request.method == 'POST':
         title = request.form['title']
         content = request.form['content']

@@ -5,8 +5,9 @@ namespace:
   name: demo
 
 service:
-  port: 8111
+  port: 3111
   type: ClusterIP
+  nodePort: 30007
 
 image:
   repository: codepoetme/techtrends
@@ -23,8 +24,8 @@ resources:
 livenessProbe:
   httpGet:
     path: /status
-    port: http
+    port: 3111
 readinessProbe:
   httpGet:
     path: /status
-    port: http
+    port: 3111

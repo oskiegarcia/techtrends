@@ -1,16 +1,17 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: techtrends-svc
+  name: techtrends-nodeport
   labels:
     app: techtrends
   namespace: {{ .Values.namespace.name }}
 spec:
-  type: {{ .Values.service.type }}
+  type: NodePort
   ports:
     - port: {{ .Values.service.port }}
       targetPort: {{ .Values.service.port }}
       protocol: TCP
       name: http
+      nodePort: {{ .Values.service.nodePort }}
   selector:
     app: techtrends
