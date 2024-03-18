@@ -25,9 +25,10 @@ The port mapping allows us to access the application on http://localhost:3111
 
 To run this application there are a few steps required:
 
-1. change directory to src
+1. change directory to src and activate virtual environment
 ```shell
 cd src
+. venv/bin/activate
 ```
 1. Install dependencies 
 ```shell
