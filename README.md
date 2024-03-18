@@ -51,7 +51,7 @@ The application is running on port `3111` and you can access it by querying the 
 
 1. Build the application
 ```shell
-docker build -t cosdepoetme/techtrends:v1 .
+docker build -t codepoetme/techtrends:v1 .
 ```
 
 2. Run the application

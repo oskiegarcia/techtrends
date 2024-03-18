@@ -11,7 +11,7 @@ service:
 
 image:
   repository: codepoetme/techtrends
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   tag: "latest"
 
 replicaCount: 1
