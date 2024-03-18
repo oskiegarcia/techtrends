@@ -1,11 +1,11 @@
 ## Docker commands used to build the application
 ```shell
-docker build -t cosdepoetme/techtrends:v1 .
+docker build -t codepoetme/techtrends:v1 .
 ```
 
 ## Docker commands used to run the application
 ```shell
-docker run -p 30007:3111 cosdepoetme/techtrends:v1
+docker run -p 30007:3111 codepoetme/techtrends:v1
 ```
 
 ## Docker commands used to get the application logs
