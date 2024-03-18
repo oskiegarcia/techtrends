@@ -3,7 +3,9 @@
 ## Step 1 - Test helm templates for errors
  - cd <helm dir>
  - helm template techtrends . --debug
- - helm install techtrends . -- dry-run
+ - helm install techtrends . --dry-run -f values.yaml
+ - helm install techtrends . --dry-run -f values-staging.yaml
+ - helm install techtrends . --dry-run -f values-prod.yaml
 
 ## Step 2 - Install helm chart
 - cd <helm dir>
