@@ -1,13 +1,10 @@
-apiVersion: v2
+apiVersion: v1
 name: techtrends
 description: A Helm chart for TechTrends
-
-type: application
 
 keywords:
   - techtrends
 version: 1.0.0
-appVersion: "latest"
 maintainers:
   - name: oskiegarcia
     email: oskiegarcia@xyz.com

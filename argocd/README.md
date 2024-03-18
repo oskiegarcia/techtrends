@@ -38,3 +38,10 @@ Step 5 - Delete secret for initial admin password
 ```shell
 kubectl delete secret argocd-initial-admin-secret -n argocd
 ```
+
+Step 6 - Create ArgoCD applications
+```shell
+kubectl apply -f helm-techtrends-sandbox.yaml
+kubectl apply -f helm-techtrends-staging.yaml
+kubectl apply -f helm-techtrends-prod.yaml
+```

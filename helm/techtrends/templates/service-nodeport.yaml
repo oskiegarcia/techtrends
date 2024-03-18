@@ -9,7 +9,7 @@ spec:
   type: NodePort
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
       protocol: TCP
       name: http
       nodePort: {{ .Values.service.nodePort }}
