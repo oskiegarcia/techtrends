@@ -17,3 +17,10 @@
 
 ## ArgoCD UU
 ![argocd-ui.jpeg](argocd-ui.jpeg)
+
+## ArgoCD techtrends staging
+![argocd-techtrends-staging.jpeg](argocd-techtrends-staging.jpeg)
+
+## ArgoCD techtrends prod
+![argocd-techtrends-prod.jpeg](argocd-techtrends-prod.jpeg)
+
