@@ -44,10 +44,10 @@ def get_post(post_id):
         connection.close()
         return post
     except sqlite3.Error as e:
-        app.logger.error(f'Error accessing database: {e}')
+        app.logger.error('Error accessing database: {}'.format(e))
         return None
     except Exception as e:
-        app.logger.error(f'An expected error: {e}')
+        app.logger.error('An expected error: {}'.format(e))
         return None
 
 
@@ -59,10 +59,10 @@ def get_post_count():
         connection.close()
         return post_count[0]
     except sqlite3.Error as e:
-        app.logger.error(f'Error accessing database: {e}')
+        app.logger.error('Error accessing database: {}'.format(e))
         return 0
     except Exception as e:
-        app.logger.error(f'An expected error: {e}')
+        app.logger.error('An expected error: {}'.format(e))
         return 0
 
 # Function to get the number of active db connections
@@ -81,10 +81,10 @@ def get_active_db_connections():
 
         return active_connections
     except sqlite3.Error as e:
-        app.logger.error(f'Error accessing database: {e}')
+        app.logger.error('Error accessing database: {}'.format(e))
         return 0
     except Exception as e:
-        app.logger.error(f'An expected error: {e}')
+        app.logger.error('An expected error: {}'.format(e))
         return 0
 
 
@@ -102,10 +102,10 @@ def index():
         app.logger.info('Index request successfull')
         return render_template('index.html', posts=posts)
     except sqlite3.Error as e:
-        app.logger.error(f'Error accessing database: {e}')
+        app.logger.error('Error accessing database: {}'.format(e))
         return render_template('error.html', errorMessage="Error accessing database")
     except Exception as e:
-        app.logger.error(f'An expected error: {e}')
+        app.logger.error('An expected error: {}'.format(e))
         return render_template('error.html', errorMessage="An expected error occurred")
 
 # Define how each individual article is rendered
@@ -148,10 +148,10 @@ def create():
                 app.logger.info('Create request successfull')
                 return redirect(url_for('index'))
             except sqlite3.Error as e:
-                app.logger.error(f'Error accessing database: {e}')
+                app.logger.error('Error accessing database: {}'.format(e))
                 return render_template('error.html', errorMessage="Error accessing database")
             except Exception as e:
-                app.logger.error(f'An expected error: {e}')
+                app.logger.error('An expected error: {}'.format(e))
                 return render_template('error.html', errorMessage="An expected error occurred")
 
     return render_template('create.html')

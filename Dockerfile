@@ -3,7 +3,7 @@ LABEL maintainer="Oscar Garcia"
 
 COPY ./src  /app
 WORKDIR /app
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements-2.7.txt
 
 ENV PYTHONUNBUFFERED=1
 
